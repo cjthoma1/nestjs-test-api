@@ -8,6 +8,7 @@ import { ConfigService, ConfigModule } from '@nestjs/config';
 import { IEnvironmentVariables } from 'src/config/configuration-interface';
 import { LocalAuthGuard } from './guards/local-auth/local-auth.guard';
 import { JwtStrategy } from './jwt.strategy';
+import { AuthController } from './auth.controller';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { JwtStrategy } from './jwt.strategy';
     }),
   ],
   providers: [AuthService, LocalAuthGuard, LocalStrategy, JwtStrategy],
-  exports: [AuthService]
+  exports: [AuthService],
+  controllers: [AuthController]
 })
 export class AuthModule {}
