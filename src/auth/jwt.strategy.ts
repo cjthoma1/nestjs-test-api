@@ -15,8 +15,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
 
     this.configService = configService;
-
-    console.log('Got our config service', this.configService);
   }
 
   async validate(payload: any) {
