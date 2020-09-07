@@ -6,7 +6,7 @@ import { LocalStrategy } from './local.strategy';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import { IEnvironmentVariables } from 'src/config/configuration-interface';
-import { LocalAuthGuard } from './guards/local-auth/local-auth.guard';
+import { LocalAuthGuard } from '../guards/local-auth/local-auth.guard';
 import { JwtStrategy } from './jwt.strategy';
 import { AuthController } from './auth.controller';
 
